@@ -1,0 +1,5 @@
+{
+  "name": "Maestro Vision",
+  "description": "An interactive gesture experience where your hand movements conduct a live techno track with tempo control, DJ filter sweeps, and fist bass drops.",
+  "requestFramePermissions": ["camera"]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "maestro-vision",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "postinstall": "node scripts/sync-model.mjs",
+    "dev": "vite --host 127.0.0.1 --port 3000 --strictPort",
+    "build": "node scripts/sync-model.mjs && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 3000 --strictPort",
+    "lint": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "playwright test",
+    "check": "npm run lint && npm test && npm run build && npm run test:browser"
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@mediapipe/camera_utils": "^0.3.1675466862",
+    "@mediapipe/drawing_utils": "^0.3.1675466124",
+    "@mediapipe/hands": "^0.4.1675469240",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^6.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  },
+  "engines": {
+    "node": ">=24.16.0 <25"
+  },
+  "packageManager": "npm@11.13.0"
+}
